@@ -1,0 +1,3 @@
+To Do: 
+
+1. Pag pinindot ni user yung view details , dapat makita yung author and year.
