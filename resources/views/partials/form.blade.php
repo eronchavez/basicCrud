@@ -16,5 +16,6 @@
         @error('published_year')
             <div style="color: red;">{{ $message }}</div>
         @enderror
-
+        
+        
         <br><br>

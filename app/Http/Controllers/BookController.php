@@ -48,10 +48,10 @@ class BookController extends Controller
     
     public function update(BookRequest $bookRequest , $id){
 
-        $book = Book::find($id);
-        $book->update($bookRequest->validated());
+        $book = Book::find($id);// find the specific id first
+        $book->update($bookRequest->validated());//validate the specific information with that id
         
-        return $this->index();
+        return $this->index(); // return to index , which is all data 
     }
 
 
