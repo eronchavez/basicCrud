@@ -1,28 +1,5 @@
 <x-layout>
-
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      font-family: sans-serif;
-    }
-
   
-    input[type="text"] {
-      width: 100%;
-      padding: 8px;
-      margin-bottom: 12px;
-    }
-
-    input[type="submit"] {
-      padding: 8px 16px;
-    }
-  </style>
-
     <form action="{{ route ('book.update', $book )}}" method="POST">
         @method('PUT')
         <h1>Library Management System</h1>
