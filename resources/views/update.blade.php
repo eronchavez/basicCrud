@@ -1,8 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Update Book</title>
+<x-layout>
+
   <style>
     body {
       margin: 0;
@@ -25,9 +22,7 @@
       padding: 8px 16px;
     }
   </style>
-</head>
-<body>
-    
+
     <form action="{{ route ('book.update', $book )}}" method="POST">
         @method('PUT')
         <h1>Library Management System</h1>
@@ -35,6 +30,4 @@
         @include('partials.form')
         
     </form>
-
-</body>
-</html>
+</x-layout>

@@ -1,8 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Create Book</title>
+<x-layout>
+
   <style>
     body {
       margin: 0;
@@ -32,5 +29,5 @@
       @csrf
       @include('partials.form')
   </form>
-</body>
-</html>
+
+</x-layout>

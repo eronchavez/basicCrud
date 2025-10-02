@@ -18,7 +18,7 @@ Route::get('/books/{book}',[BookController::class , 'show'])->name('book.show');
 
 Route::get('/books/{id}/edit',[BookController::class , 'edit'])->name('book.edit');
 
-
 Route::put('/books/{id}' , [BookController::class , 'update'])->name('book.update');
 
 Route::get('/books/{id}/delete' , [BookController::class , 'delete'])->name('book.delete');
+
