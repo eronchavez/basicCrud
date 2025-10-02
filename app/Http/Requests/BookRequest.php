@@ -25,6 +25,8 @@ class BookRequest extends FormRequest
             'title' => 'required|string|min:2',
             'author' => 'required|string|min:2',
             'published_year' => 'required|digits:4'
-        ];
+        ]; 
+        
+        // if validation fails , it passes an error to our input fields using @error('name')
     }
 }

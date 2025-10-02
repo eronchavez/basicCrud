@@ -7,13 +7,13 @@ Route::get('/',function(){
     return view('welcome');
 });
 
-// Dito mag iinput 
+// returns view (Form)
 Route::get('/books/create' ,[BookController::class , 'create'])->name('create.book');
-// Dito mapupunta yung ininput mo , tapos vavalidate nadin dito
+// proccess the data you passed from the form
 Route::post('/books', [BookController::class , 'store'])->name('store.book');
-// Pag navalidate na , ipapakita na yung na input mo
+// if validation passes the conditions , it shows all of the data in index.blade
 Route::get('/books', [BookController::class, 'index'])->name('book.index');
-
+// show the full information for specific subject
 Route::get('/books/{book}',[BookController::class , 'show'])->name('book.show');
 
 Route::get('/books/{id}/edit',[BookController::class , 'edit'])->name('book.edit');

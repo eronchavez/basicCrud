@@ -19,14 +19,22 @@ class BookController extends Controller
 
     public function index()
     {
-        $books = Book::all();
-        return view('index', compact('books'));
+        $books = Book::all();// all data in database shows.
+        return view('index', compact('books')); // compact means merge all data's into one array.
+        //Like this
+        // [
+        //     []
+        //     []
+        //     []
+        // ]
     }
 
+
+    //Expect the parameter is number (unique identifier)
     public function show($book)
     {
-        $id = Book::find($book);
-        return view('show' , ['book' => $id]);
+        $id = Book::find($book);//find the ID that matches in our database
+        return view('show' , ['book' => $id]); // returns view and passes the id matched, the 'book' will be the variable inside blade file " $book = $id (unique)"
      
     }
 
@@ -34,7 +42,7 @@ class BookController extends Controller
 
         $book = $id;
         return view('update' , ['book' => $book]);
-
+        
     }
     
     
